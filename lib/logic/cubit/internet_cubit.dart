@@ -40,7 +40,7 @@ class InternetCubit extends Cubit<InternetState> {
     return super.close();
   }
 
-  void listen(Null Function(dynamic internetState) param0) {}
+
 
   // void listen(Null Function(dynamic internetState) param0) {}
 }

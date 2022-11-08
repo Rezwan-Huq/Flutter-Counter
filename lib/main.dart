@@ -1,14 +1,9 @@
-import 'dart:js';
-
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_counter/logic/cubit/counter_cubit.dart';
 import 'package:flutter_counter/logic/cubit/internet_cubit.dart';
 import 'package:flutter_counter/presentation/router/app_router.dart';
-import 'package:flutter_counter/presentation/screens/home_screen.dart';
-import 'package:flutter_counter/presentation/screens/second_screen.dart';
-import 'package:flutter_counter/presentation/screens/third_screen.dart';
 
 void main() {
   // const CounterState counterState1 = CounterState(counterValue: 1);
@@ -46,7 +41,7 @@ class MyApp extends StatelessWidget {
           create: (context) => InternetCubit(connectivity: connectivity),
         ),
         BlocProvider<CounterCubit>(
-          create: (context) => CounterCubit(internetCubit:context.read<InternetCubit>() ),
+          create: (context) => CounterCubit(),
         ),
       ],
       child: MaterialApp(

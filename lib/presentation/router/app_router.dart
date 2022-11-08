@@ -8,8 +8,7 @@ import 'package:flutter_counter/presentation/screens/second_screen.dart';
 import 'package:flutter_counter/presentation/screens/third_screen.dart';
 
 class ApprRouter {
-  final CounterCubit _counterCubit = CounterCubit(internetCubit: null);
-
+  
   Route? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case '/':
